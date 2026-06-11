@@ -5,7 +5,7 @@ const ADMIN_EMAIL = "danielfinotti2@gmail.com";
 const packages = {
   landing: {
     name: "Landing Page",
-    price: 600,
+    price: 500,
     deadline: "Entrega média em 3 dias",
     description: "Ideal para divulgar produto, serviço, evento ou promoção com foco em conversão.",
     features: [
@@ -18,7 +18,7 @@ const packages = {
   },
   institucional: {
     name: "Site Institucional",
-    price: 500,
+    price: 350,
     deadline: "Entrega média em 7 dias",
     description: "Perfeito para empresas que precisam apresentar serviços, história, contato e credibilidade.",
     features: [
@@ -31,7 +31,7 @@ const packages = {
   },
   ecommerce: {
     name: "Loja Online",
-    price: 800,
+    price: 700,
     deadline: "Entrega média em 14 dias",
     description: "Uma loja online para vender produtos com catálogo, carrinho visual e caminho de compra organizado.",
     features: [
@@ -44,7 +44,7 @@ const packages = {
   },
   redesign: {
     name: "Redesign",
-    price: 350,
+    price: 150,
     deadline: "Entrega média em 5 dias",
     description: "Para quem já tem um site, mas quer deixar o visual mais moderno, rápido e confiável.",
     features: [
@@ -110,6 +110,21 @@ function clone(value) {
 
 function formatCurrency(value) {
   return Number(value || 0).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+}
+
+function parseCurrency(value) {
+  const numbers = String(value || "").replace(/[^\d,.-]/g, "").replace(/\./g, "").replace(",", ".");
+  return Number(numbers) || 0;
+}
+
+function syncPackagePricesFromCards() {
+  $$("[data-package-card]").forEach((card) => {
+    const packageId = card.dataset.packageCard;
+    const priceText = $("strong", card)?.textContent;
+    if (packages[packageId] && priceText) {
+      packages[packageId].price = parseCurrency(priceText);
+    }
+  });
 }
 
 function createId(prefix = "id") {
@@ -805,6 +820,7 @@ function setupVideoFallback() {
 
 document.addEventListener("DOMContentLoaded", async () => {
   window.euodeeneDatabase = appDatabase;
+  syncPackagePricesFromCards();
   await renderProjects();
   setupVideoFallback();
   setupModal();
