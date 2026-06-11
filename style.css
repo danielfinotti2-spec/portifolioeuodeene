@@ -462,11 +462,21 @@ h2 {
   place-items: center;
   margin-bottom: 18px;
   border-radius: 20px;
+  overflow: hidden;
   background:
     linear-gradient(135deg, #111, #fff 48%, #333 62%, #050505);
   color: #000;
   font-weight: 900;
   letter-spacing: -.04em;
+}
+.project-thumb.has-image {
+  background: #111;
+}
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 .project-card h3 { font-size: 24px; margin: 0 10px 8px; }
 .project-card p { color: var(--muted); margin: 0 10px 14px; line-height: 1.6; }
@@ -753,6 +763,31 @@ h2 {
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 18px;
   background: rgba(0,0,0,.25);
+}
+
+.project-admin-thumb {
+  width: 72px;
+  height: 54px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+}
+
+.project-admin-thumb.empty {
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.project-admin-item > div:first-of-type {
+  flex: 1;
+  min-width: 0;
 }
 
 .project-admin-item strong {

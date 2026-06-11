@@ -7,10 +7,14 @@ create table if not exists public.projects (
   title text not null,
   description text not null,
   link text default '',
+  image_url text default '',
   sort_order integer default 0,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+alter table public.projects
+add column if not exists image_url text default '';
 
 create table if not exists public.leads (
   id uuid primary key default gen_random_uuid(),

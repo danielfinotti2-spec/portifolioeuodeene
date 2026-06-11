@@ -64,6 +64,7 @@ const defaultProjects = [
     title: "Vitrine minimalista",
     description: "Modelo para produtos, combos e chamada rápida para WhatsApp.",
     link: "",
+    imageUrl: "",
     sort_order: 1
   },
   {
@@ -72,6 +73,7 @@ const defaultProjects = [
     title: "Empresa local",
     description: "Modelo institucional para apresentar serviço, confiança e contato.",
     link: "",
+    imageUrl: "",
     sort_order: 2
   },
   {
@@ -80,6 +82,7 @@ const defaultProjects = [
     title: "Oferta direta",
     description: "Landing page para promoção, lançamento ou campanha com foco em venda.",
     link: "",
+    imageUrl: "",
     sort_order: 3
   }
 ];
@@ -193,6 +196,7 @@ function projectFromSupabase(row) {
     title: row.title,
     description: row.description,
     link: row.link || "",
+    imageUrl: row.image_url || row.imageUrl || "",
     sort_order: row.sort_order || 0
   };
 }
@@ -204,6 +208,7 @@ function projectToSupabase(project, index = 0) {
     title: project.title || "Projeto",
     description: project.description || "Descrição do projeto.",
     link: project.link || "",
+    image_url: project.imageUrl || "",
     sort_order: Number(project.sort_order || index + 1)
   };
 }
@@ -217,7 +222,7 @@ async function loadPublicProjects() {
 
   const { data, error } = await supabaseClient
     .from("projects")
-    .select("id,badge,title,description,link,sort_order,created_at")
+    .select("*")
     .order("sort_order", { ascending: true })
     .order("created_at", { ascending: true });
 
@@ -393,8 +398,12 @@ async function renderProjects() {
     const article = document.createElement("article");
     article.className = "project-card reveal show";
     const safeLink = (project.link || "").trim();
+    const safeImage = (project.imageUrl || "").trim();
+    const thumb = safeImage
+      ? `<div class="project-thumb has-image"><img src="${escapeAttribute(safeImage)}" alt="${escapeAttribute(project.title || "Projeto")}"></div>`
+      : `<div class="project-thumb">${escapeHtml(project.badge || "PROJETO")}</div>`;
     article.innerHTML = `
-      <div class="project-thumb">${escapeHtml(project.badge || "PROJETO")}</div>
+      ${thumb}
       <h3>${escapeHtml(project.title || "Projeto")}</h3>
       <p>${escapeHtml(project.description || "Descrição do projeto.")}</p>
       ${safeLink ? `<a class="project-link" href="${escapeAttribute(safeLink)}" target="_blank" rel="noreferrer">Ver projeto →</a>` : ""}
@@ -415,6 +424,34 @@ function escapeHtml(value) {
 
 function escapeAttribute(value) {
   return escapeHtml(value).replace(/`/g, "&#096;");
+}
+
+function imageFileToDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    if (!file || !file.type.startsWith("image/")) {
+      reject(new Error("Arquivo de imagem inválido."));
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error("Não consegui ler a imagem."));
+    reader.onload = () => {
+      const image = new Image();
+      image.onerror = () => reject(new Error("Não consegui preparar a imagem."));
+      image.onload = () => {
+        const maxSize = 1200;
+        const scale = Math.min(1, maxSize / Math.max(image.width, image.height));
+        const canvas = document.createElement("canvas");
+        canvas.width = Math.round(image.width * scale);
+        canvas.height = Math.round(image.height * scale);
+        const context = canvas.getContext("2d");
+        context.drawImage(image, 0, 0, canvas.width, canvas.height);
+        resolve(canvas.toDataURL("image/jpeg", 0.82));
+      };
+      image.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
 }
 
 function setupReveal() {
@@ -589,6 +626,8 @@ function renderChart(counts) {
 function resetProjectForm() {
   $("#projectForm")?.reset();
   if ($("#projectId")) $("#projectId").value = "";
+  if ($("#projectImageUrl")) $("#projectImageUrl").value = "";
+  if ($("#projectImageFile")) $("#projectImageFile").value = "";
   if ($("#saveProject")) $("#saveProject").textContent = "Salvar projeto";
 }
 
@@ -598,6 +637,8 @@ function fillProjectForm(project) {
   $("#projectBadge").value = project.badge || "";
   $("#projectDescription").value = project.description || "";
   $("#projectLink").value = project.link || "";
+  if ($("#projectImageUrl")) $("#projectImageUrl").value = project.imageUrl || "";
+  if ($("#projectImageFile")) $("#projectImageFile").value = "";
   $("#saveProject").textContent = "Atualizar projeto";
   $("#projectTitle").focus();
 }
@@ -617,7 +658,12 @@ function renderProjectManager() {
   db.projects.forEach((project) => {
     const item = document.createElement("div");
     item.className = "project-admin-item";
+    const safeImage = (project.imageUrl || "").trim();
+    const preview = safeImage
+      ? `<img class="project-admin-thumb" src="${escapeAttribute(safeImage)}" alt="">`
+      : `<span class="project-admin-thumb empty">${escapeHtml(project.badge || "PROJETO")}</span>`;
     item.innerHTML = `
+      ${preview}
       <div>
         <strong>${escapeHtml(project.title)}</strong>
         <span>${escapeHtml(project.badge)} • ${escapeHtml(project.description)}</span>
@@ -672,6 +718,19 @@ async function resetProjectsToDefault() {
 }
 
 function setupProjectManager() {
+  $("#projectImageFile")?.addEventListener("change", async (event) => {
+    const file = event.target.files && event.target.files[0];
+    if (!file) return;
+
+    try {
+      $("#projectImageUrl").value = await imageFileToDataUrl(file);
+    } catch (error) {
+      alert("Não consegui carregar essa imagem. Tente outra foto ou cole um link.");
+      console.error(error);
+      event.target.value = "";
+    }
+  });
+
   $("#projectForm")?.addEventListener("submit", async (event) => {
     event.preventDefault();
     const id = $("#projectId").value || createId("project");
@@ -681,6 +740,7 @@ function setupProjectManager() {
       badge: $("#projectBadge").value.trim(),
       description: $("#projectDescription").value.trim(),
       link: $("#projectLink").value.trim(),
+      imageUrl: $("#projectImageUrl")?.value.trim() || "",
       sort_order: Date.now()
     };
 

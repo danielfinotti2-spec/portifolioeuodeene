@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=fotos-2" />
 </head>
 <body>
   <div class="intro" id="intro" aria-label="Animação de abertura euodeene">
@@ -295,6 +295,14 @@
               Link do projeto
               <input id="projectLink" type="url" placeholder="https://...">
             </label>
+            <label>
+              Foto da capa
+              <input id="projectImageUrl" type="url" placeholder="https://link-da-imagem.jpg">
+            </label>
+            <label>
+              Enviar foto
+              <input id="projectImageFile" type="file" accept="image/*">
+            </label>
             <div class="project-form-actions">
               <button class="btn btn-white" type="submit" id="saveProject">Salvar projeto</button>
               <button class="btn btn-dark" type="button" id="cancelProjectEdit">Cancelar edição</button>
@@ -309,7 +317,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js?v=precos-2"></script>
-  <script src="intro-start.js?v=precos-2"></script>
+  <script src="script.js?v=fotos-2"></script>
+  <script src="intro-start.js?v=fotos-2"></script>
 </body>
 </html>
