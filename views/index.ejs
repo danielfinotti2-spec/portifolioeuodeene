@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deenes Ambientes</title>
+  
+  <script src="/assets/js/tailwind.config.js?v=2"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="font-sans bg-white selection:bg-stone-200">
+
+  <div id="splash-screen" class="fixed inset-0 z-[100] bg-stone-900 flex items-center justify-center transition-opacity duration-1000 ease-in-out">
+    <div class="loader-container">
+      
+      <svg class="euodeene-svg-logo" xmlns="http://www.w3.org/2000/svg" width="320" height="110" viewBox="0 0 420 120">
+        <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="'Playfair Display', serif" font-size="56" font-weight="600" letter-spacing="-1">
+          euodeene
+        </text>
+      </svg>
+      
+      <span class="text-sm font-medium text-stone-400 uppercase tracking-widest mt-2 fade-up delay-300 visible">Ambientes Planejados</span>
+    </div>
+  </div>
+
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white backdrop-blur-md shadow-sm border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="#inicio" class="flex-shrink-0 flex items-center">
+          <span class="font-serif text-2xl font-bold tracking-tight text-stone-900">Deenes</span>`r`n          <span class="ml-2 text-sm font-medium text-stone-500 uppercase tracking-widest hidden sm:block">Ambientes</span>
+        </a>
+
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="#inicio" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">Início</a>
+          <a href="#sobre" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">Sobre</a>
+          <a href="#servicos" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">Processo</a>
+          <a href="#portfolio" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">Portfólio</a>
+          <a href="#contato" class="bg-stone-900 text-white px-5 py-2.5 rounded-sm font-medium text-sm hover:bg-stone-800 transition-all hover:scale-105 flex items-center">
+            Fale Conosco
+          </a>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="text-stone-900 p-2 focus:outline-none">
+            <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            <svg id="icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 shadow-lg">
+      <div class="px-4 pt-2 pb-6 space-y-1 flex flex-col">
+        <a href="#inicio" class="mobile-link block px-3 py-3 text-stone-600 font-medium border-b border-stone-100">Início</a>
+        <a href="#sobre" class="mobile-link block px-3 py-3 text-stone-600 font-medium border-b border-stone-100">Sobre</a>
+        <a href="#servicos" class="mobile-link block px-3 py-3 text-stone-600 font-medium border-b border-stone-100">Processo</a>
+        <a href="#portfolio" class="mobile-link block px-3 py-3 text-stone-600 font-medium border-b border-stone-100">Portfólio</a>
+        <a href="#contato" class="mobile-link block mt-4 mx-3 bg-stone-900 text-white text-center px-4 py-3 rounded-sm font-medium">Fale Conosco</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="inicio" class="relative min-h-screen flex items-center pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <video src="/assets/video/logoprincipal.mp4" alt="Interior moderno" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+      <div class="absolute inset-0 bg-stone-900/50"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="lg:w-1/2 lg:pr-16">
+        <div class="fade-up">
+          <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-white mb-6">
+            Você sonha,     
+          </h1>
+          <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-white mb-6">
+            a gente realiza.       
+          </h1>
+        </div>
+        <div class="fade-up delay-100">
+          <p class="text-lg text-stone-200 mb-8 max-w-lg leading-relaxed">
+            Unimos design, funcionalidade e qualidade para criar ambientes planejados que refletem seu estilo de vida e personalidade.
+          </p>
+        </div>
+        <div class="fade-up delay-200 flex flex-col sm:flex-row gap-4">
+          <a href="#portfolio" class="bg-white text-stone-900 px-8 py-4 rounded-sm font-medium text-center hover:bg-stone-100 hover:scale-105 transition-all">
+            Ver Portfólio
+          </a>
+          <a href="#contato" class="border border-white/40 text-white backdrop-blur-sm px-8 py-4 rounded-sm font-medium text-center hover:bg-white/10 hover:scale-105 transition-all">
+            Solicitar Orçamento
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="py-20 bg-white">
+    <video
+    src="/assets/video/logoprincipal.mp4"
+    class="w-full h-full object-cover"
+    autoplay
+    muted
+    loop
+    playsinline>
+</video>
+        <div>
+          <span class="text-stone-500 font-medium tracking-wider uppercase text-sm mb-3 block">Excelência em cada detalhe</span>
+          <h2 class="font-serif text-3xl md:text-4xl font-semibold text-stone-900 mb-6">
+            Por que escolher a Deenes Ambientes?
+          </h2>
+          <div class="space-y-6 mt-8">
+            
+            <div class="fade-up delay-100 flex items-start">
+              <svg class="text-stone-400 mt-1 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <div>
+                <h5 class="font-medium text-stone-900">Projetos Personalizados</h5>
+                <p class="text-sm text-stone-500 mt-1">Design pensado exatamente para o seu espaço e rotina.</p>
+              </div>
+            </div>
+
+            <div class="fade-up delay-200 flex items-start">
+              <svg class="text-stone-400 mt-1 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <div>
+                <h5 class="font-medium text-stone-900">Materiais Premium</h5>
+                <p class="text-sm text-stone-500 mt-1">Trabalhamos com os melhores fornecedores e ferragens do mercado.</p>
+              </div>
+            </div>
+
+            <div class="fade-up delay-300 flex items-start">
+              <svg class="text-stone-400 mt-1 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <div>
+                <h5 class="font-medium text-stone-900">Atenção aos Detalhes</h5>
+                <p class="text-sm text-stone-500 mt-1">Acabamento minucioso em cada milímetro.</p>
+              </div>
+            </div>
+
+            <div class="fade-up delay-300 flex items-start">
+              <svg class="text-stone-400 mt-1 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              
+              <div>
+                <h5 class="font-medium text-stone-900">Clientes Satisfeitos</h5>
+                <p class="text-sm text-stone-500 mt-1 mb-3">Dê uma olhada no que os clientes dizem sobre nossos projetos.</p>
+                
+                <a href="#depoimentos" class="inline-block px-4 py-2 text-sm font-medium rounded-sm transition-all hover:scale-105 bg-white text-stone-700 border border-stone-300 hover:bg-stone-100 hover:text-stone-900">
+                  Ver Avaliações
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="py-20 bg-stone-900 text-stone-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-up">
+        <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-4 text-white">Nosso Processo</h2>
+        <p class="text-stone-400 max-w-2xl mx-auto">Do primeiro contato até a entrega das chaves, garantimos tranquilidade e profissionalismo.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="fade-up p-6 bg-stone-800 rounded-sm border border-stone-700 transition-all duration-300 hover:-translate-y-1 hover:border-stone-500">
+          <span class="text-stone-500 font-serif text-4xl mb-4 block">01</span>
+          <h4 class="text-xl font-medium mb-2 text-white">Atendimento</h4>
+          <p class="text-stone-400 text-sm">Entendemos suas necessidades, gostos e o orçamento para alinhar expectativas.</p>
+        </div>
+        <div class="fade-up delay-100 p-6 bg-stone-800 rounded-sm border border-stone-700 transition-all duration-300 hover:-translate-y-1 hover:border-stone-500">
+          <span class="text-stone-500 font-serif text-4xl mb-4 block">02</span>
+          <h4 class="text-xl font-medium mb-2 text-white">Projeto 3D</h4>
+          <p class="text-stone-400 text-sm">Apresentamos um modelo realista para visualização e eventuais ajustes antes da produção.</p>
+        </div>
+        <div class="fade-up delay-200 p-6 bg-stone-800 rounded-sm border border-stone-700 transition-all duration-300 hover:-translate-y-1 hover:border-stone-500">
+          <span class="text-stone-500 font-serif text-4xl mb-4 block">03</span>
+          <h4 class="text-xl font-medium mb-2 text-white">Fabricação</h4>
+          <p class="text-stone-400 text-sm">Produção com maquinário de precisão e materiais de alto padrão, garantindo acabamento perfeito.</p>
+        </div>
+        <div class="fade-up delay-300 p-6 bg-stone-800 rounded-sm border border-stone-700 transition-all duration-300 hover:-translate-y-1 hover:border-stone-500">
+          <span class="text-stone-500 font-serif text-4xl mb-4 block">04</span>
+          <h4 class="text-xl font-medium mb-2 text-white">Montagem</h4>
+          <p class="text-stone-400 text-sm">Instalação realizada por equipe própria especializada, com limpeza e cuidado com o seu lar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 fade-up">
+        <div>
+          <h2 class="font-serif text-3xl md:text-4xl font-semibold text-stone-900 mb-4">Projetos Recentes</h2>
+          <p class="text-stone-600">Inspire-se com alguns dos ambientes que transformamos.</p>
+        </div>
+        
+        <div class="mt-6 md:mt-0 flex flex-wrap gap-2" id="portfolio-filters">
+          <button data-filter="Site" class="filter-btn px-4 py-2 text-sm font-medium rounded-sm transition-colors bg-stone-900 text-white">Site</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+        <div class="portfolio-item fade-up group relative overflow-hidden rounded-sm bg-stone-900 aspect-video md:col-span-2 lg:col-span-2" data-category="Site">
+          <video src="/assets/video/lm-store-preview.mp4" class="w-full h-full object-cover pointer-events-none group-hover:scale-105 transition-transform duration-500" autoplay muted loop playsinline preload="auto"></video>
+          <div class="absolute inset-0 bg-stone-950/55 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <span class="text-stone-300 text-sm uppercase tracking-wider font-medium">Site</span>
+            <h3 class="text-white text-2xl font-serif font-medium mt-1">LM Store</h3>
+            <p class="text-stone-200 text-sm mt-2 max-w-md">Loja online com produtos, conta, carrinho e compra rápida pelo WhatsApp.</p>
+          </div>
+          <a href="https://lmpodssite.vercel.app/" target="_blank" rel="noopener noreferrer" class="absolute inset-0" aria-label="Abrir site LM Store"></a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-16 text-center fade-up delay-300">
+        <a href="https://lmpodssite.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-stone-600 hover:text-stone-900 font-medium transition-colors group">
+          <span class="underline underline-offset-8 decoration-stone-300 group-hover:decoration-stone-900 transition-colors duration-300">
+            Acessar LM Store
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 transform group-hover:translate-x-1 transition-transform duration-300"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="depoimentos" class="py-20 bg-stone-100 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center fade-up">
+      <h2 class="font-serif text-3xl md:text-4xl font-semibold text-stone-900 mb-4">O que dizem nossos clientes</h2>
+      <p class="text-stone-600">A satisfação de quem já transformou seu lar conosco.</p>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative fade-up delay-100">
+      <div class="overflow-hidden w-full pb-8 pt-4" id="carousel-viewport">
+        <div id="carousel-track" class="flex gap-6 w-max">
+          
+          <div class="carousel-card flex-shrink-0 w-[85vw] sm:w-[400px] p-8 bg-white border border-stone-200 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative group">
+            <svg class="absolute top-6 right-6 w-12 h-12 text-stone-100 transition-colors group-hover:text-stone-200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <div class="relative z-10 flex flex-col justify-between h-full">
+              <div>
+                <div class="flex text-yellow-500 mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="text-stone-600 mb-8 italic leading-relaxed">"Este mês minha cozinha foi montada pela equipe da Deenes Ambientes e estou me sentindo realizada, cada pedacinho planejado com carinho, montado do jeitinho que eu esperava..."</p>
+              </div>
+              <div class="flex items-center mt-auto">
+                <div class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-serif font-bold mr-3">SB</div>
+                <div>
+                  <p class="font-medium text-stone-900 text-sm">Silvia Di Buenno</p>
+                  <p class="text-xs text-stone-500 uppercase tracking-wide">Avaliação do Google</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-card flex-shrink-0 w-[85vw] sm:w-[400px] p-8 bg-white border border-stone-200 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative group">
+            <svg class="absolute top-6 right-6 w-12 h-12 text-stone-100 transition-colors group-hover:text-stone-200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <div class="relative z-10 flex flex-col justify-between h-full">
+              <div>
+                <div class="flex text-yellow-500 mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="text-stone-600 mb-8 italic leading-relaxed">"Eu não tenho palavras para expressar minha satisfação com a Deenes Ambientes. A Patrícia do início ao fim foi super atenciosa dando atenção a cada detalhe. Qualidade impecável!"</p>
+              </div>
+              <div class="flex items-center mt-auto">
+                <div class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-serif font-bold mr-3">CS</div>
+                <div>
+                  <p class="font-medium text-stone-900 text-sm">Carol Schmidt</p>
+                  <p class="text-xs text-stone-500 uppercase tracking-wide">Avaliação do Google</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-card flex-shrink-0 w-[85vw] sm:w-[400px] p-8 bg-white border border-stone-200 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative group">
+            <svg class="absolute top-6 right-6 w-12 h-12 text-stone-100 transition-colors group-hover:text-stone-200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <div class="relative z-10 flex flex-col justify-between h-full">
+              <div>
+                <div class="flex text-yellow-500 mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="text-stone-600 mb-8 italic leading-relaxed">"Fui muito bem atendido pelo Lucas, me entregaram os móveis dentro do prazo e a qualidade no geral me agradou muito. Recomendo toda a equipe."</p>
+              </div>
+              <div class="flex items-center mt-auto">
+                <div class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-serif font-bold mr-3">RA</div>
+                <div>
+                  <p class="font-medium text-stone-900 text-sm">Ricardo Almeida</p>
+                  <p class="text-xs text-stone-500 uppercase tracking-wide">Avaliação do Google</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-card flex-shrink-0 w-[85vw] sm:w-[400px] p-8 bg-white border border-stone-200 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative group">
+            <svg class="absolute top-6 right-6 w-12 h-12 text-stone-100 transition-colors group-hover:text-stone-200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <div class="relative z-10 flex flex-col justify-between h-full">
+              <div>
+                <div class="flex text-yellow-500 mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="text-stone-600 mb-8 italic leading-relaxed">"Foi perfeita! Já fiz dois negócios com a empresa. Cumpre o prazo de entrega. Os montadores são educados e deixam o ambiente limpo. Super recomendo."</p>
+              </div>
+              <div class="flex items-center mt-auto">
+                <div class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-serif font-bold mr-3">MO</div>
+                <div>
+                  <p class="font-medium text-stone-900 text-sm">Manoel Oliveira</p>
+                  <p class="text-xs text-stone-500 uppercase tracking-wide">Avaliação do Google</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="contato" class="bg-stone-900 pt-20 pb-10 border-t border-stone-700 text-stone-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+        
+        <div class="fade-up">
+          <h2 class="font-serif text-3xl font-semibold text-white mb-6">Pronto para transformar seu ambiente?</h2>
+          <p class="text-stone-400 mb-8 max-w-md">Visite nosso escritório ou entre em contato para agendar uma consultoria com nossos especialistas.</p>
+          
+          <div class="space-y-6 mb-8">
+            <div class="flex items-center">
+              <div class="bg-stone-800 p-3 rounded-sm mr-4 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-wide text-stone-500">Telefone / Whatsapp</span>
+                <p class="text-white font-medium">(21) 99485-6055</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center">
+              <div class="bg-stone-800 p-3 rounded-sm mr-4 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-wide text-stone-500">E-mail</span>
+                <p class="text-white font-medium">danielfinotti2@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-center">
+              <div class="bg-stone-800 p-3 rounded-sm mr-4 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-wide text-stone-500">Endereço</span>
+                <p class="text-white font-medium">Av. Ver. Toaldo Túlio 2532 - Sala 01</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full rounded-sm overflow-hidden border border-stone-800 bg-stone-900">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.7617114993504!2d-49.35347422378548!3d-25.41278577757288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce15585aec8fd%3A0x12555fa0b5ae795d!2sDeenes%20Ambientes!5e0!3m2!1spt-BR!2sbr!4v1771988872487!5m2!1spt-BR!2sbr" 
+              class="w-full h-64" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+        
+        <div class="fade-up delay-100 bg-stone-900 p-8 rounded-sm border border-stone-700 flex flex-col justify-between">
+          <div>
+            <h3 class="font-serif text-2xl font-medium text-white mb-6 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="mr-3 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Horário de Funcionamento
+            </h3>
+            
+            <ul class="space-y-4 mb-8">
+              <li class="flex justify-between items-center border-b border-stone-800 pb-3">
+                <span class="text-stone-400">Segunda a Sexta</span>
+                <span class="text-white font-medium">08:00 às 18:00</span>
+              </li>
+              <li class="flex justify-between items-center border-b border-stone-800 pb-3">
+                <span class="text-stone-400">Sábado</span>
+                <span class="text-white font-medium">09:00 às 13:00</span>
+              </li>
+              <li class="flex justify-between items-center pb-2">
+                <span class="text-stone-400">Domingo</span>
+                <span class="text-stone-500 font-medium italic">Fechado</span>
+              </li>
+              <br>
+              <span class="text-stone-500 font-medium italic">Atendimento apenas com horário marcado*</span>
+            </ul>
+          </div>     
+          <div>
+            <h4 class="text-sm font-medium text-stone-500 uppercase tracking-wider mb-4">Siga nossas redes</h4>
+            <div class="flex space-x-3">
+              <a href="https://www.instagram.com/euodeene/" class="bg-stone-800 p-3 rounded-sm text-white hover:bg-white hover:text-stone-900 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a href="https://wa.me/5521994856055" class="bg-stone-800 p-3 rounded-sm text-white hover:bg-white hover:text-stone-900 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col md:flex-row justify-between items-center border-t border-stone-800 pt-8 mt-8">
+        <div class="mb-4 md:mb-0 flex items-center">
+          <span class="font-serif text-2xl font-semibold tracking-tight text-white">Deenes</span>
+          <span class="ml-2 text-sm font-medium text-stone-500 uppercase tracking-widest">Ambientes</span>
+        </div>
+        <p class="text-sm text-center md:text-left text-stone-500">&copy; 2026 Deenes Ambientes. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 group">
+    <div class="bg-white text-stone-800 text-sm font-medium py-2 px-4 rounded-xl shadow-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none border border-stone-100">
+      Fale com um especialista
+    </div>
+    
+    <a href="https://wa.me/5521994856055" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center relative">
+      <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25"></span>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" class="relative z-10">
+        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+      </svg>
+    </a>
+  </div>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
+
+
+
