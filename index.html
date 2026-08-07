@@ -1,522 +1,170 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DeeneStore</title>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DeeneStore — design e desenvolvimento de sites para marcas e negócios.">
+  <title>DeeneStore — Sites com presença</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="./assets/js/tailwind.config.js?v=2"></script>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script src="./assets/js/tailwind.config.js?v=3"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css?v=3">
   <link rel="icon" type="image/jpeg" href="./assets/img/logo.png">
 </head>
-<body class="font-sans bg-white selection:bg-stone-200">
 
-  <div id="splash-screen" class="fixed inset-0 z-[100] bg-stone-900 flex items-center justify-center px-6 transition-opacity duration-1000 ease-in-out">
-    <div class="loader-container">
-      
-      <svg class="euodeene-svg-logo w-[240px] sm:w-[420px] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140">
-        <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-style="italic" font-size="92" font-weight="600">
-          DeeneStore
-        </text>
-      </svg>
-      
-      <span class="text-sm font-medium text-stone-400 uppercase tracking-widest mt-3 fade-up delay-300 visible">Sites feito com Sua criatividade!</span>
-    </div>
-  </div>
+<body class="bg-[#f3f1ec] text-stone-950 antialiased">
+  <header class="sticky top-0 z-50 border-b border-black/10 bg-[#f3f1ec]/95 backdrop-blur">
+    <nav class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8" aria-label="Navegação principal">
+      <a href="#inicio" class="text-sm font-semibold tracking-[-0.02em] sm:text-base" aria-label="DeeneStore — início">
+        DEENESTORE<span class="align-top text-[9px]">®</span>
+      </a>
 
-  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white backdrop-blur-md shadow-sm border-b border-stone-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
-        <a href="#inicio" class="flex-shrink-0 flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="text-stone-900">
-            <path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7Z"/>
-            <path d="M5 20h14"/>
-          </svg>
-          <span class="font-serif italic text-2xl sm:text-3xl font-semibold tracking-tight text-stone-900">DeeneStore</span>
-        </a>
+      <div class="flex items-center gap-5 text-xs font-medium uppercase tracking-[0.12em] sm:gap-8">
+        <a href="#portfolio" class="link-line hidden sm:inline-block">Projetos</a>
+        <a href="#contato" class="link-line">Contato</a>
+      </div>
+    </nav>
+  </header>
 
-        <div class="hidden md:flex space-x-8 items-center">
-          <a href="#inicio" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">Início</a>
-          <a href="#sobre" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">Sobre</a>
-          <a href="#servicos" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">Processo</a>
-          <a href="#portfolio" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">Portfólio</a>
-          <a href="#contato" class="bg-stone-900 text-white px-5 py-2.5 rounded-sm font-medium text-sm hover:bg-stone-800 transition-all hover:scale-105 flex items-center">
-            Fale Conosco
+  <main>
+    <section id="inicio" class="mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl flex-col justify-between px-5 py-10 sm:px-8 sm:py-14">
+      <div class="flex items-center justify-between border-t border-black/20 pt-3 text-[10px] font-medium uppercase tracking-[0.18em] text-stone-600 sm:text-xs">
+        <span>Estúdio digital independente</span>
+        <span>Rio de Janeiro · BR</span>
+      </div>
+
+      <div class="py-16 sm:py-20">
+        <h1 class="hero-title max-w-[1100px] font-medium">
+          Sites com<br>
+          presença.
+        </h1>
+      </div>
+
+      <div class="grid gap-8 border-t border-black/20 pt-5 sm:grid-cols-2 sm:items-end">
+        <p class="max-w-lg text-lg leading-relaxed tracking-[-0.02em] text-stone-700 sm:text-xl">
+          Design e desenvolvimento para marcas que querem ser vistas, lembradas e escolhidas.
+        </p>
+
+        <div class="flex items-center gap-6 sm:justify-end">
+          <a href="#portfolio" class="inline-flex items-center gap-3 bg-stone-950 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-stone-700">
+            Ver projetos
+            <span aria-hidden="true">↘</span>
+          </a>
+          <a href="https://wa.me/5521994856055" target="_blank" rel="noopener noreferrer" class="link-line text-sm font-medium">
+            Pedir orçamento
           </a>
         </div>
-
-        <div class="md:hidden flex items-center">
-          <button id="mobile-menu-btn" class="text-stone-900 p-2 focus:outline-none">
-            <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            <svg id="icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-          </button>
-        </div>
       </div>
-    </div>
-
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 shadow-lg">
-      <div class="px-4 pt-2 pb-6 space-y-1 flex flex-col">
-        <a href="#inicio" class="mobile-link block px-3 py-3 text-stone-600 font-medium border-b border-stone-100">Início</a>
-        <a href="#sobre" class="mobile-link block px-3 py-3 text-stone-600 font-medium border-b border-stone-100">Sobre</a>
-        <a href="#servicos" class="mobile-link block px-3 py-3 text-stone-600 font-medium border-b border-stone-100">Processo</a>
-        <a href="#portfolio" class="mobile-link block px-3 py-3 text-stone-600 font-medium border-b border-stone-100">Portfólio</a>
-        <a href="#contato" class="mobile-link block mt-4 mx-3 bg-stone-900 text-white text-center px-4 py-3 rounded-sm font-medium">Fale Conosco</a>
-      </div>
-    </div>
-  </nav>
-
-  <section id="inicio" class="relative w-full overflow-hidden sm:aspect-[1672/941]">
-
-    <!-- Fundo -->
-    <div
-        class="absolute inset-0 bg-cover bg-center hero-bg-anim"
-        style="background-image:url('./assets/img/hero-split.png');">
-    </div>
-
-    <!-- Overlay escuro apenas no mobile, para garantir legibilidade do texto empilhado -->
-    <div class="absolute inset-0 bg-black/50 sm:hidden"></div>
-
-    <!-- Conteúdo -->
-    <div class="relative z-10 flex flex-col sm:absolute sm:inset-0 sm:flex-row">
-
-        <!-- Metade esquerda (preta) -->
-        <div class="w-full sm:w-1/2 sm:h-full flex flex-col justify-center items-center sm:items-start text-center sm:text-left px-6 py-16 sm:py-0 sm:pl-12 sm:pr-10">
-            <div class="max-w-lg mx-auto sm:mx-0">
-                <span class="hero-fade delay-100 block text-white/70 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.35em] mb-3 sm:mb-5">
-                    DeeneStore
-                </span>
-
-                <h1 class="hero-fade delay-200 font-sans text-3xl sm:text-4xl lg:text-6xl font-extrabold uppercase text-white leading-[1.1] mb-3 sm:mb-5 tracking-tight">
-                    Sites profissionais.<br>
-                    Para Empresas, Divulgação e Vendas.
-                </h1>
-
-                <p class="hero-fade delay-300 text-xs sm:text-sm lg:text-base text-white/80 uppercase tracking-wide font-medium mb-6 lg:mb-8">
-                    Sites que transformam marcas em referência.
-                </p>
-
-                <a href="#portfolio"
-                   class="hero-fade delay-400 hero-btn inline-flex items-center gap-3 border border-white/60 text-white px-6 py-3 sm:px-7 sm:py-3.5 text-xs sm:text-sm font-semibold uppercase tracking-widest hover:bg-white hover:text-stone-900 transition-all duration-300">
-                    Ver Portfólio
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hero-btn-arrow transition-transform duration-300"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                </a>
-            </div>
-        </div>
-
-        <!-- Metade direita (branca) -->
-        <div class="w-full sm:w-1/2 sm:h-full flex flex-col justify-center items-center sm:items-end px-6 py-12 sm:py-0 sm:pr-12 sm:pl-4">
-
-            <!-- Lista de diferenciais -->
-            <div class="flex flex-col gap-5 sm:gap-6 lg:gap-8 mb-8 sm:mb-10 lg:mb-14 mx-auto sm:mx-0 max-w-xs sm:max-w-none w-full sm:w-auto">
-
-                <div class="hero-fade delay-200 group flex items-start gap-4">
-                    <div class="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-white text-stone-900 sm:bg-stone-900 sm:text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7Z"/><path d="M5 20h14"/></svg>
-                    </div>
-                    <div class="text-left">
-                        <p class="font-semibold text-white sm:text-stone-900 text-xs sm:text-sm lg:text-base uppercase tracking-wide">Design Autoral</p>
-                        <p class="text-white/70 sm:text-stone-500 text-[11px] sm:text-xs lg:text-sm mt-0.5">Cada projeto é único.</p>
-                    </div>
-                </div>
-
-                <div class="hero-fade delay-300 group flex items-start gap-4">
-                    <div class="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-white text-stone-900 sm:bg-stone-900 sm:text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
-                    </div>
-                    <div class="text-left">
-                        <p class="font-semibold text-white sm:text-stone-900 text-xs sm:text-sm lg:text-base uppercase tracking-wide">Performance</p>
-                        <p class="text-white/70 sm:text-stone-500 text-[11px] sm:text-xs lg:text-sm mt-0.5">Sites rápidos, otimizados e eficientes.</p>
-                    </div>
-                </div>
-
-                <div class="hero-fade delay-400 group flex items-start gap-4">
-                    <div class="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-white text-stone-900 sm:bg-stone-900 sm:text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/></svg>
-                    </div>
-                    <div class="text-left">
-                        <p class="font-semibold text-white sm:text-stone-900 text-xs sm:text-sm lg:text-base uppercase tracking-wide">Confiança</p>
-                        <p class="text-white/70 sm:text-stone-500 text-[11px] sm:text-xs lg:text-sm mt-0.5">Segurança e suporte do início ao fim.</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <a href="#contato"
-               class="hero-fade delay-500 hero-btn inline-flex items-center gap-3 bg-white text-stone-900 sm:bg-stone-900 sm:text-white px-6 py-3 sm:px-7 sm:py-3.5 text-xs sm:text-sm font-semibold uppercase tracking-widest hover:bg-stone-100 sm:hover:bg-stone-800 transition-all duration-300">
-                Solicitar Orçamento
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hero-btn-arrow transition-transform duration-300"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-        </div>
-
-    </div>
-
-</section>
-  <section id="sobre" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <div class="fade-up group relative rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 w-full aspect-video bg-stone-100 ring-1 ring-stone-200 overflow-hidden flex items-center justify-center">
-          <video src="./assets/video/3d-hd-auto-.mp4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" autoplay muted loop playsinline></video>
-          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-stone-900/25 via-transparent to-transparent"></div>
-          <div class="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10"></div>
-        </div>
-        <div>
-          <span class="text-stone-500 font-medium tracking-wider uppercase text-sm mb-3 block">Excelência em cada detalhe</span>
-          <h2 class="font-serif text-3xl md:text-4xl font-semibold text-stone-900 mb-6">
-            Por que escolher a DeeneStore?
-          </h2>
-          <div class="space-y-6 mt-8">
-            
-            <div class="fade-up delay-100 flex items-start">
-              <svg class="text-stone-400 mt-1 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
-              <div>
-                <h5 class="font-medium text-stone-900">Projetos Personalizados</h5>
-                <p class="text-sm text-stone-500 mt-1">Design pensado exatamente para o seu espaço e rotina.</p>
-              </div>
-            </div>
-
-            <div class="fade-up delay-200 flex items-start">
-              <svg class="text-stone-400 mt-1 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
-              <div>
-                <h5 class="font-medium text-stone-900">Materiais Premium</h5>
-                <p class="text-sm text-stone-500 mt-1">Trabalhamos com os melhores fornecedores e ferragens do mercado.</p>
-              </div>
-            </div>
-
-            <div class="fade-up delay-300 flex items-start">
-              <svg class="text-stone-400 mt-1 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
-              <div>
-                <h5 class="font-medium text-stone-900">Atenção aos Detalhes</h5>
-                <p class="text-sm text-stone-500 mt-1">Acabamento minucioso em cada milímetro.</p>
-              </div>
-            </div>
-
-            <div class="fade-up delay-300 flex items-start">
-              <svg class="text-stone-400 mt-1 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              
-              <div>
-                <h5 class="font-medium text-stone-900">Clientes Satisfeitos</h5>
-                <p class="text-sm text-stone-500 mt-1 mb-3">Dê uma olhada no que os clientes dizem sobre nossos projetos.</p>
-                
-                <a href="#depoimentos" class="inline-block px-4 py-2 text-sm font-medium rounded-sm transition-all hover:scale-105 bg-white text-stone-700 border border-stone-300 hover:bg-stone-100 hover:text-stone-900">
-                  Ver Avaliações
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="servicos" class="py-20 bg-stone-900 text-stone-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 fade-up">
-        <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-4 text-white">Nosso Processo</h2>
-        <p class="text-stone-400 max-w-2xl mx-auto">Do primeiro contato até a entrega das chaves, garantimos tranquilidade e profissionalismo.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="fade-up p-6 bg-stone-800 rounded-sm border border-stone-700 transition-all duration-300 hover:-translate-y-1 hover:border-stone-500">
-          <span class="text-stone-500 font-serif text-4xl mb-4 block">01</span>
-          <h4 class="text-xl font-medium mb-2 text-white">Atendimento</h4>
-          <p class="text-stone-400 text-sm">Entendemos suas necessidades, gostos e o orçamento para alinhar expectativas.</p>
-        </div>
-        <div class="fade-up delay-100 p-6 bg-stone-800 rounded-sm border border-stone-700 transition-all duration-300 hover:-translate-y-1 hover:border-stone-500">
-          <span class="text-stone-500 font-serif text-4xl mb-4 block">02</span>
-          <h4 class="text-xl font-medium mb-2 text-white">Projeto 3D</h4>
-          <p class="text-stone-400 text-sm">Apresentamos um modelo realista para visualização e eventuais ajustes antes da produção.</p>
-        </div>
-        <div class="fade-up delay-200 p-6 bg-stone-800 rounded-sm border border-stone-700 transition-all duration-300 hover:-translate-y-1 hover:border-stone-500">
-          <span class="text-stone-500 font-serif text-4xl mb-4 block">03</span>
-          <h4 class="text-xl font-medium mb-2 text-white">Fabricação</h4>
-          <p class="text-stone-400 text-sm">Produção com maquinário de precisão e materiais de alto padrão, garantindo acabamento perfeito.</p>
-        </div>
-        <div class="fade-up delay-300 p-6 bg-stone-800 rounded-sm border border-stone-700 transition-all duration-300 hover:-translate-y-1 hover:border-stone-500">
-          <span class="text-stone-500 font-serif text-4xl mb-4 block">04</span>
-          <h4 class="text-xl font-medium mb-2 text-white">Montagem</h4>
-          <p class="text-stone-400 text-sm">Instalação realizada por equipe própria especializada, com limpeza e cuidado com o seu lar.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="portfolio" class="py-20 bg-stone-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 fade-up">
-        <div>
-          <h2 class="font-serif text-3xl md:text-4xl font-semibold text-stone-900 mb-4">Projetos Recentes</h2>
-          <p class="text-stone-600">Inspire-se com alguns dos ambientes que transformamos.</p>
-        </div>
-        
-        <div class="mt-6 md:mt-0 flex flex-wrap gap-2" id="portfolio-filters">
-          <button data-filter="Site" class="filter-btn px-4 py-2 text-sm font-medium rounded-sm transition-colors bg-stone-900 text-white">Site</button>
-        </div>
-      </div>
-
-      <div class="portfolio-item fade-up group relative overflow-hidden rounded-[28px] shadow-2xl bg-stone-900 aspect-video md:col-span-2 lg:col-span-2" data-category="Site">
-    
-    <video
-        src="./assets/video/lm-store-preview.mp4"
-        class="w-full h-full object-cover pointer-events-none group-hover:scale-105 transition-transform duration-500"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto">
-    </video>
-
-    <div class="absolute inset-0 bg-stone-950/55 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-        <span class="text-stone-300 text-sm uppercase tracking-wider font-medium">
-            Site
-        </span>
-
-        <h3 class="text-white text-2xl font-serif font-medium mt-1">
-            LM Store
-        </h3>
-
-        <p class="text-stone-200 text-sm mt-2 max-w-md">
-            Loja online com produtos, conta, carrinho e compra rápida pelo WhatsApp.
-        </p>
-    </div>
-
-    <a href="https://lmpodssite.vercel.app/"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="absolute inset-0"
-       aria-label="Abrir site LM Store">
-    </a>
-
-</div>
     </section>
 
-  <section id="depoimentos" class="py-20 bg-stone-100 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center fade-up">
-      <h2 class="font-serif text-3xl md:text-4xl font-semibold text-stone-900 mb-4">O que dizem nossos clientes</h2>
-      <p class="text-stone-600">A satisfação de quem já transformou seu sonho em realidade.</p>
-    </div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative fade-up delay-100">
-      <div class="overflow-hidden w-full pb-8 pt-4" id="carousel-viewport">
-        <div id="carousel-track" class="flex gap-6 w-max">
-          
-          <div class="carousel-card flex-shrink-0 w-[85vw] sm:w-[400px] p-8 bg-white border border-stone-200 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative group">
-            <svg class="absolute top-6 right-6 w-12 h-12 text-stone-100 transition-colors group-hover:text-stone-200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-            <div class="relative z-10 flex flex-col justify-between h-full">
-              <div>
-                <div class="flex text-yellow-500 mb-5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </div>
-                <p class="text-stone-600 mb-8 italic leading-relaxed">"Finalmente tirei meu projeto do papel e criei o site da minha empresa. O atendimento foi excelente do início ao fim, entenderam exatamente o que eu precisava e entregaram um resultado muito melhor do que eu imaginava. Ficou moderno, rápido e com a cara do meu negócio. Estou muito satisfeito!
-"</p>
-              </div>
-              <div class="flex items-center mt-auto">
-                <div class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-serif font-bold mr-3">SB</div>
-                <div>
-                  <p class="font-medium text-stone-900 text-sm">Silvia Di Buenno</p>
-                  <p class="text-xs text-stone-500 uppercase tracking-wide">Avaliação do Google</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section id="portfolio" class="bg-white py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="mb-12 grid gap-5 border-t border-black/20 pt-4 sm:mb-16 sm:grid-cols-2">
+          <p class="text-xs font-medium uppercase tracking-[0.18em] text-stone-500">Trabalhos selecionados</p>
+          <h2 class="max-w-xl text-3xl font-medium leading-tight tracking-[-0.045em] sm:text-5xl">
+            Projetos digitais feitos para funcionar — e marcar.
+          </h2>
+        </div>
 
-          <div class="carousel-card flex-shrink-0 w-[85vw] sm:w-[400px] p-8 bg-white border border-stone-200 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative group">
-            <svg class="absolute top-6 right-6 w-12 h-12 text-stone-100 transition-colors group-hover:text-stone-200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-            <div class="relative z-10 flex flex-col justify-between h-full">
-              <div>
-                <div class="flex text-yellow-500 mb-5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </div>
-                <p class="text-stone-600 mb-8 italic leading-relaxed">"Eu não tenho palavras para expressar minha satisfação com a DeeneStore. O João do início ao fim foi super atencioso dando atenção a cada detalhe. Qualidade impecável!"</p>
+        <div class="grid gap-x-6 gap-y-14 lg:grid-cols-2">
+          <article class="project-card">
+            <a href="https://lmpodssite.vercel.app/" target="_blank" rel="noopener noreferrer" class="group block" aria-label="Abrir o site LM Store">
+              <div class="relative aspect-[16/10] overflow-hidden bg-stone-950">
+                <video
+                  src="./assets/video/lm-store-preview.mp4"
+                  class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata">
+                </video>
+                <div class="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"></div>
+                <span class="absolute bottom-4 right-4 grid h-11 w-11 place-items-center bg-white text-lg text-black transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true">↗</span>
               </div>
-              <div class="flex items-center mt-auto">
-                <div class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-serif font-bold mr-3">CS</div>
+              <div class="flex items-start justify-between border-b border-black/20 py-5">
                 <div>
-                  <p class="font-medium text-stone-900 text-sm">Carol Schmidt</p>
-                  <p class="text-xs text-stone-500 uppercase tracking-wide">Avaliação do Google</p>
+                  <h3 class="text-2xl font-medium tracking-[-0.035em]">LM Store</h3>
+                  <p class="mt-1 text-sm text-stone-500">E-commerce · 2026</p>
                 </div>
+                <span class="pt-1 text-xs font-medium tracking-[0.14em] text-stone-400">01</span>
               </div>
-            </div>
-          </div>
+            </a>
+          </article>
 
-          <div class="carousel-card flex-shrink-0 w-[85vw] sm:w-[400px] p-8 bg-white border border-stone-200 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative group">
-            <svg class="absolute top-6 right-6 w-12 h-12 text-stone-100 transition-colors group-hover:text-stone-200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-            <div class="relative z-10 flex flex-col justify-between h-full">
-              <div>
-                <div class="flex text-yellow-500 mb-5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </div>
-                <p class="text-stone-600 mb-8 italic leading-relaxed">"Fui muito bem atendido pelo João, me entregaram o site dentro do prazo e a qualidade no geral me agradou muito. Recomendo toda a equipe."</p>
+          <article class="project-card lg:mt-20">
+            <a href="https://modo-carreira-eight.vercel.app/" target="_blank" rel="noopener noreferrer" class="group block" aria-label="Abrir o site Modo Carreira">
+              <div class="relative aspect-[16/10] overflow-hidden bg-stone-950">
+                <video
+                  src="./assets/video/modo-carreira-preview.mp4"
+                  poster="./assets/img/modo-carreira-preview.jpg"
+                  class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata">
+                </video>
+                <div class="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10"></div>
+                <span class="absolute bottom-4 right-4 grid h-11 w-11 place-items-center bg-white text-lg text-black transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true">↗</span>
               </div>
-              <div class="flex items-center mt-auto">
-                <div class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-serif font-bold mr-3">RA</div>
+              <div class="flex items-start justify-between border-b border-black/20 py-5">
                 <div>
-                  <p class="font-medium text-stone-900 text-sm">Ricardo Almeida</p>
-                  <p class="text-xs text-stone-500 uppercase tracking-wide">Avaliação do Google</p>
+                  <h3 class="text-2xl font-medium tracking-[-0.035em]">Modo Carreira</h3>
+                  <p class="mt-1 text-sm text-stone-500">Plataforma de carreira · 2026</p>
                 </div>
+                <span class="pt-1 text-xs font-medium tracking-[0.14em] text-stone-400">02</span>
               </div>
-            </div>
-          </div>
-
-          <div class="carousel-card flex-shrink-0 w-[85vw] sm:w-[400px] p-8 bg-white border border-stone-200 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative group">
-            <svg class="absolute top-6 right-6 w-12 h-12 text-stone-100 transition-colors group-hover:text-stone-200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-            <div class="relative z-10 flex flex-col justify-between h-full">
-              <div>
-                <div class="flex text-yellow-500 mb-5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </div>
-                <p class="text-stone-600 mb-8 italic leading-relaxed">"Foi perfeita! Já fiz dois negócios com a empresa. Cumpre o prazo de entrega. são educados e deixam do jeitinho que eu esperava. Super recomendo."</p>
-              </div>
-              <div class="flex items-center mt-auto">
-                <div class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-serif font-bold mr-3">MO</div>
-                <div>
-                  <p class="font-medium text-stone-900 text-sm">Manoel Oliveira</p>
-                  <p class="text-xs text-stone-500 uppercase tracking-wide">Avaliação do Google</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+            </a>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
-  <footer id="contato" class="bg-stone-900 pt-20 pb-10 border-t border-stone-700 text-stone-400">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
-        
-        <div class="fade-up">
-          <h2 class="font-serif text-3xl font-semibold text-white mb-6">Pronto para transformar seu negócio?</h2>
-          <p class="text-stone-400 mb-8 max-w-md">Entre em contato com nossa equipe e faça o seu orçamento.</p>
-          
-          <div class="space-y-6 mb-8">
-            <div class="flex items-center">
-              <div class="bg-stone-800 p-3 rounded-sm mr-4 text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <div>
-                <span class="block text-xs uppercase tracking-wide text-stone-500">Telefone / Whatsapp</span>
-                <p class="text-white font-medium">(21) 99485-6055</p>
-              </div>
-            </div>
-            
-            <div class="flex items-center">
-              <div class="bg-stone-800 p-3 rounded-sm mr-4 text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              </div>
-              <div>
-                <span class="block text-xs uppercase tracking-wide text-stone-500">E-mail</span>
-                <p class="text-white font-medium">danielfinotti2@gmail.com</p>
-              </div>
-            </div>
+    </section>
 
-            <div class="flex items-center">
-              <div class="bg-stone-800 p-3 rounded-sm mr-4 text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <span class="block text-xs uppercase tracking-wide text-stone-500">Endereço</span>
-                <p class="text-white font-medium">Av. Santa cruz 9016, Rio de janeiro</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full overflow-hidden rounded-3xl border border-stone-800 bg-stone-900 shadow-xl">
-    <video
-        src="./assets/video/videobaixo.mp4"
-        class="w-full h-[300px] object-cover pointer-events-none"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto">
-    </video>
-</div>
-          </div>
-        </div>
-        
-        <div class="fade-up delay-100 bg-stone-900 p-8 rounded-sm border border-stone-700 flex flex-col justify-between">
-          <div>
-            <h3 class="font-serif text-2xl font-medium text-white mb-6 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="mr-3 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Horário de Funcionamento
-            </h3>
-            
-            <ul class="space-y-4 mb-8">
-              <li class="flex justify-between items-center border-b border-stone-800 pb-3">
-                <span class="text-stone-400">Segunda a Sexta</span>
-                <span class="text-white font-medium">08:00 às 18:00</span>
-              </li>
-              <li class="flex justify-between items-center border-b border-stone-800 pb-3">
-                <span class="text-stone-400">Sábado</span>
-                <span class="text-white font-medium">09:00 às 13:00</span>
-              </li>
-              <li class="flex justify-between items-center pb-2">
-                <span class="text-stone-400">Domingo</span>
-                <span class="text-stone-500 font-medium italic">Fechado</span>
-              </li>
-              <br>
-              <span class="text-stone-500 font-medium italic">Atendimento apenas com horário marcado*</span>
-            </ul>
-          </div>     
-          <div>
-            <h4 class="text-sm font-medium text-stone-500 uppercase tracking-wider mb-4">Siga nossas redes</h4>
-            <div class="flex space-x-3">
-              <a href="https://www.instagram.com/euodeene/" class="bg-stone-800 p-3 rounded-sm text-white hover:bg-white hover:text-stone-900 transition-colors duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-              </a>
-              <a href="https://wa.me/5521994856055" class="bg-stone-800 p-3 rounded-sm text-white hover:bg-white hover:text-stone-900 transition-colors duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </a>
-            </div>
+    <section class="border-y border-black/10 bg-[#f3f1ec] py-16 sm:py-20" aria-labelledby="servicos-title">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="grid gap-10 lg:grid-cols-[1fr_2fr]">
+          <h2 id="servicos-title" class="text-xs font-medium uppercase tracking-[0.18em] text-stone-500">O que eu faço</h2>
+          <div class="grid gap-7 sm:grid-cols-3">
+            <p class="border-t border-black/20 pt-3 text-lg font-medium">Sites institucionais</p>
+            <p class="border-t border-black/20 pt-3 text-lg font-medium">Lojas online</p>
+            <p class="border-t border-black/20 pt-3 text-lg font-medium">Landing pages</p>
           </div>
         </div>
       </div>
-      
-      <div class="flex flex-col md:flex-row justify-between items-center border-t border-stone-800 pt-8 mt-8">
-        <div class="mb-4 md:mb-0 flex items-center gap-3">
-          <span class="font-serif italic text-2xl font-semibold tracking-tight text-white">DeeneStore</span>
-          <span class="w-px h-5 bg-stone-700"></span>
-          <span class="text-xs font-medium text-stone-500 uppercase tracking-[0.2em]">Sites</span>
+    </section>
+
+    <section id="contato" class="bg-stone-950 py-20 text-white sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <p class="mb-8 text-xs font-medium uppercase tracking-[0.18em] text-stone-500">Tem um projeto em mente?</p>
+        <h2 class="max-w-5xl text-[clamp(3rem,8vw,7rem)] font-medium leading-[0.92] tracking-[-0.065em]">
+          Vamos colocar<br>no ar.
+        </h2>
+
+        <div class="mt-16 grid gap-8 border-t border-white/20 pt-6 sm:mt-24 sm:grid-cols-2 sm:items-end">
+          <div class="space-y-2 text-sm text-stone-400">
+            <p>Rio de Janeiro, Brasil</p>
+            <a href="mailto:danielfinotti2@gmail.com" class="link-line inline-block text-white">danielfinotti2@gmail.com</a>
+          </div>
+
+          <div class="sm:text-right">
+            <a href="https://wa.me/5521994856055" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-4 text-xl font-medium sm:text-2xl">
+              Conversar no WhatsApp <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
-        <p class="text-sm text-center md:text-left text-stone-500">&copy; 2026 DeeneStore. Todos os direitos reservados.</p>
       </div>
+    </section>
+  </main>
+
+  <footer class="bg-stone-950 text-stone-500">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 border-t border-white/10 px-5 py-6 text-xs sm:flex-row sm:items-center sm:justify-between sm:px-8">
+      <p>© 2026 DeeneStore</p>
+      <a href="https://www.instagram.com/euodeene/" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-white">Instagram ↗</a>
     </div>
   </footer>
-
-  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 group">
-    <div class="bg-white text-stone-800 text-sm font-medium py-2 px-4 rounded-xl shadow-lg opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none border border-stone-100">
-      Fale com um especialista e agende seu orçamento sem compromisso!
-    </div>
-    
-    <a href="https://wa.me/5521994856055" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center relative">
-      <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25"></span>
-      
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" class="relative z-10">
-        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-      </svg>
-    </a>
-  </div>
-  <script src="./assets/js/main.js"></script>
 </body>
 </html>
-

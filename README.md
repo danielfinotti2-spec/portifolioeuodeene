@@ -20,7 +20,6 @@ Para usar com Express/EJS, renderize `views/index.ejs` e sirva a pasta `assets` 
 
 ## Observações
 
-- `index.html` e `views/index.ejs` divergiram na seção do hero (o `.html` usa uma imagem de fundo estática com layout novo; o `.ejs` ainda usa o vídeo de fundo com o layout antigo). Ainda não foram sincronizados.
-- As imagens `ZATTI.png`, `home-theater.jpg`, `cozinha.jpg`, `porque-a-zatti.jpg`, `quarto-infantil.jpg`, `suite-master.jpg` e `loja-de-motos.jpg` estão na pasta mas não são usadas em nenhum lugar do site ainda.
-- `kaneki.png` foi removido do uso no hero (era um placeholder de teste); o arquivo continua na pasta `assets/img/` caso seja necessário.
+- A versão EJS inclui o `index.html`, mantendo as duas formas de uso sempre sincronizadas.
+- Os vídeos dos projetos ficam em `assets/video/` e são reproduzidos automaticamente, sem áudio e em loop.
 

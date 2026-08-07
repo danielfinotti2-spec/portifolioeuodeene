@@ -1,88 +1,70 @@
-﻿/* Estilos globais básicos e animações */
-    html { scroll-behavior: smooth; }
-    body {
-      background-color: #fafafa; /* stone-50 */
-      color: #111111; /* stone-900 */
-    }
-    
-    /* Reveal on Scroll */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .delay-100 { transition-delay: 100ms; }
-    .delay-200 { transition-delay: 200ms; }
-    .delay-300 { transition-delay: 300ms; }
-
-    /* Animações do Hero (entrada + fundo + botões) */
-    .hero-fade {
-      opacity: 0;
-      transform: translateY(26px);
-      animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      animation-delay: 2.3s;
-    }
-    .hero-fade.delay-100 { animation-delay: 2.3s; }
-    .hero-fade.delay-200 { animation-delay: 2.45s; }
-    .hero-fade.delay-300 { animation-delay: 2.6s; }
-    .hero-fade.delay-400 { animation-delay: 2.75s; }
-    .hero-fade.delay-500 { animation-delay: 2.9s; }
-
-    @keyframes heroFadeUp {
-      from { opacity: 0; transform: translateY(26px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-bg-anim {
-      animation: heroBgZoom 16s ease-in-out infinite alternate;
-    }
-    @keyframes heroBgZoom {
-      0%   { transform: scale(1); }
-      100% { transform: scale(1.06); }
-    }
-
-    .hero-btn:hover .hero-btn-arrow {
-      transform: translateX(4px);
-    }
-
-    /* Esconder scrollbar na área do marquee */
-    .hide-scrollbar::-webkit-scrollbar { display: none; }
-    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-    /* Efeito de desenho da Logo (Splash Screen) */
-    .loader-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .euodeene-svg-logo text {
-      fill: #fafafa; /* Cor branca/stone-50 */
-      opacity: 0;
-      transform-box: fill-box;
-      transform-origin: center;
-      transform: scale(0.92);
-      letter-spacing: 6px;
-      animation: revealLogo 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    @keyframes revealLogo {
-      0% { opacity: 0; transform: scale(0.92); letter-spacing: 10px; }
-      60% { opacity: 1; }
-      100% { opacity: 1; transform: scale(1); letter-spacing: 0px; }
-    }
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+:root {
+  color-scheme: light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+::selection {
+  background: #111111;
+  color: #ffffff;
+}
+
+.hero-title {
+  font-size: clamp(4.25rem, 13vw, 10.5rem);
+  line-height: 0.8;
+  letter-spacing: -0.085em;
+}
+
+.link-line {
+  position: relative;
+  width: fit-content;
+}
+
+.link-line::after {
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease;
+}
+
+.link-line:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.project-card video {
+  background: #111111;
+}
+
+@media (max-width: 639px) {
+  .hero-title {
+    font-size: clamp(4rem, 21vw, 6rem);
+    line-height: 0.84;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
