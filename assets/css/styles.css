@@ -45,38 +45,17 @@ body {
   transform-origin: left;
 }
 
-.icon-arrow-up-right {
-  position: relative;
+.icon-arrow {
   display: inline-block;
   width: 1rem;
   height: 1rem;
   flex: 0 0 auto;
-  color: currentColor;
-}
-
-.icon-arrow-up-right::before,
-.icon-arrow-up-right::after {
-  position: absolute;
-  content: "";
-}
-
-.icon-arrow-up-right::before {
-  right: 18%;
-  bottom: 22%;
-  width: 72%;
-  height: 2px;
-  background: currentColor;
-  transform: rotate(-45deg);
-  transform-origin: center;
-}
-
-.icon-arrow-up-right::after {
-  top: 18%;
-  right: 18%;
-  width: 52%;
-  height: 52%;
-  border-top: 2px solid currentColor;
-  border-right: 2px solid currentColor;
+  vertical-align: -0.125em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .icon-arrow-xs {
