@@ -51,11 +51,6 @@ body {
   height: 1rem;
   flex: 0 0 auto;
   vertical-align: -0.125em;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 .icon-arrow-xs {
